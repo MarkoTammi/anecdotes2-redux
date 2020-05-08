@@ -32,14 +32,15 @@ npm start
 Ei ole backend toiminnallisuutta.  
 
 ### Testaus  
-??
-Komennolla  
-npm test  
+Toistaiseksi ei testaus toiminnallisuutta   
 
 ### Edistyminen
 
 6.3: anekdootit, step1 - git branch part6-03  
 Anekdoottien äänestäminen. Äänien määrä redux-storessa.    
+
+ Asennettu react-redux kirjasto  
+ npm install --save react-redux  
 
  
 
