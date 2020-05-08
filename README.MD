@@ -39,9 +39,22 @@ Toistaiseksi ei testaus toiminnallisuutta
 6.3: anekdootit, step1 - git branch part6-03  
 Anekdoottien äänestäminen. Äänien määrä redux-storessa.    
 
- Asennettu react-redux kirjasto  
- npm install --save react-redux  
+Asennettu react-redux kirjasto  
+npm install --save react-redux  
 
- 
+6.4: anekdootit, step2  
+Uusien anekdoottien lisäys.  
+
+6.6: anekdootit, step4  
+Action-olioiden luominen eriytetty action creator -funktioihin  
+
+6.7: anekdootit, step5   
+Luotu komponentti AnecdoteForm - uusi anecdote    
+
+6.8: anekdootit, step6  
+Luotu komponentti AnecdoteList - renderöi kaikki anecdotit  
+
+6.5*: anekdootit, step3   - git branch part6-08  
+Anekdotes sort by votes  
 
 
