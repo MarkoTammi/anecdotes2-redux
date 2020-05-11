@@ -1,5 +1,5 @@
 
-// Component to render what saved to the store.state.notification
+// Component to render what saved to the store.state.notification if any
 
 import React from 'react'
 
@@ -17,8 +17,8 @@ const Notification = () => {
   }
   
   return (
-    <div style={style}>
-      {notification}
+    <div>
+        { notification !== '' && <div style={style}>{notification}</div> }
     </div>
   )
 }

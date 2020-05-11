@@ -3,15 +3,32 @@
 // notificationReducer
 
 
-const notificationReducer = (state = 'initialContentAtNotification', action) => {
-    console.log('state now: ', state)
-    console.log('action', action)
-     switch(action.type) {
-
-      default:
-        return state
+const notificationReducer = (state = '', action) => {
+    console.log('notificationReducer state : ', state)
+    console.log('notificationReducer action : ', action)
+    switch(action.type) {
+        case 'SET' :
+          console.log('SET case')
+          return state = action.notification
+        case 'CLEAR' :
+          return state = action.notification
+        default:
+          return state
     }
 }
 
+export const setNotification = (notification) => {
+  return {
+    type: 'SET',
+    notification: notification
+  }
+}
+
+export const clearNotification = () => {
+  return {
+    type: 'CLEAR',
+    notification: ''
+  }
+}
 
 export default notificationReducer

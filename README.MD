@@ -68,4 +68,9 @@ Siirretty Redux-storen käsittely omaan store.js tiedostoon.
 Otettu käyttöön combineRedicers ja luotu notificationReducer  
 Notification komponentti renderöi state.notification alkutilan  
 
+6.11 paremmat anekdootit, step9  
+Paremmat notifications - sisältö/tapahtuma.  
+Tyhjentää notification 5 sek jälkeen.  
 
+6.12* paremmat anekdootit, step10  - git branch part6-12  
+Anekdoottien filteröinti   

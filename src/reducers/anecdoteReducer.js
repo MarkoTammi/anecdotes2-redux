@@ -1,5 +1,8 @@
 
 
+// Module to define store/state/actionCreator for anecdotes
+
+
 const anecdotesAtStart = [
   'If it hurts, do it more often',
   'Adding manpower to a late software project makes it later!',
@@ -9,6 +12,7 @@ const anecdotesAtStart = [
   'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'
 ]
 
+// Generates random ID for anecdote
 const getId = () => (100000 * Math.random()).toFixed(0)
 
 const asObject = (anecdote) => {
@@ -22,9 +26,10 @@ const asObject = (anecdote) => {
 const initialState = anecdotesAtStart.map(asObject)
 
 const anecdoteReducer = (state = initialState, action) => {
-  console.log('state now: ', state)
-  console.log('action', action)
+  console.log('anecdoteReducer state: ', state)
+  console.log('anecdoteReducer action:', action)
   switch(action.type) {
+    // Add votes for anecdote
     case 'ADD' :
       const id = action.id.id
       const anecdoteToGiveVote = state.find(anecdote => anecdote.id === id)
@@ -33,6 +38,7 @@ const anecdoteReducer = (state = initialState, action) => {
       }
       return state.map(anecdote => anecdote.id !== id ? anecdote : changedAnecdote)
 
+    // Create new anecdote
     case 'CREATE':
       return [...state, action.data]
 
