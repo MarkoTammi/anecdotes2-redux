@@ -64,3 +64,8 @@ npm install --save-dev redux-devtools-extension
 
 Siirretty Redux-storen käsittely omaan store.js tiedostoon.  
 
+6.10 anekdootit, step8 - git branch part6-10  
+Otettu käyttöön combineRedicers ja luotu notificationReducer  
+Notification komponentti renderöi state.notification alkutilan  
+
+
