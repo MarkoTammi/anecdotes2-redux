@@ -4,7 +4,7 @@
 
 
 const notificationReducer = (state = 'initialContentAtNotification', action) => {
-    console.log('state now: ', state.notification)
+    console.log('state now: ', state)
     console.log('action', action)
      switch(action.type) {
 
