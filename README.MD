@@ -57,4 +57,10 @@ Luotu komponentti AnecdoteList - renderöi kaikki anecdotit
 6.5*: anekdootit, step3   - git branch part6-08  
 Anekdotes sort by votes  
 
+6.9 anekdootit, step7  
+Asennettu Chromeen "React dev tools".  
+Asennettu redux-devtools-extension  
+npm install --save-dev redux-devtools-extension  
+
+Siirretty Redux-storen käsittely omaan store.js tiedostoon.  
 
