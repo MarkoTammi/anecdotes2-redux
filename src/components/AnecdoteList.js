@@ -4,14 +4,13 @@
 
 import React from 'react'
 
-import { useSelector,useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { addVote } from '../reducers/anecdoteReducer'
 
 const AnecdoteList = () => {
   
     const dispatch = useDispatch()
-    const anecdotes = useSelector(state => state)
-
+    const anecdotes = useSelector(state => state.anecdotes)
     // Sort anecdotes by "votes". Most votes is the 1st.
     anecdotes.sort((a, b) => b.votes - a.votes)
 
