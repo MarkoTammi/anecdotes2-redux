@@ -5,7 +5,7 @@
 Anekdoottien aanestyssovellus Reduxilla toteutettu
 
 Front - react, redux  
-Backend - ei toiminnallisuutta  
+Backend - tehtävästä 6.13 alkaen json-server  
  
 
 ### Luonti  
@@ -29,7 +29,9 @@ git push -u origin part6-03
 Frontendin käynnistys  
 npm start  
 
-Ei ole backend toiminnallisuutta.  
+Tehtävästä 6.13 alkaen  json-server  
+npm run server  
+
 
 ### Testaus  
 Toistaiseksi ei testaus toiminnallisuutta   
@@ -74,3 +76,21 @@ Tyhjentää notification 5 sek jälkeen.
 
 6.12* paremmat anekdootit, step10  - git branch part6-12  
 Anekdoottien filteröinti   
+
+6.13 anekdootit ja backend, step1  - git branch part6-13  
+Json-serverin asennus  
+npm install json-server --save  
+
+package.json lisäys  
+"server": "json-server -p3001 --watch db.json"  
+
+json-server käynnistys  
+npm run server  
+
+Luotu /services/anecdotes.js json hakuja varten  
+
+Asennettu axios  
+npm install axios --save  
+
+Sovellus hakee anecdootit käynnistyksessä db.json tiedostosta.  
+

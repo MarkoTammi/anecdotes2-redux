@@ -18,7 +18,6 @@ const AnecdoteList = () => {
 
     // String to filter anecdotes
     const filterString = useSelector(state => state.filter)
-    console.log('AnecdoteList filterString', filterString)
 
     // To include only anecdotes which match with filterString. filterString is empty all names are displayed.
     const filteredAnecdotes = anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(filterString.toLowerCase()))
@@ -40,29 +39,6 @@ const AnecdoteList = () => {
 
     return (
         <div>
-{/*             {filterString === '' ? anecdotes.map(anecdote =>
-                <div key={anecdote.id}>
-                    <div>
-                        {anecdote.content}
-                    </div>
-                    <div>
-                        has {anecdote.votes}
-                        <button onClick={() => handleVoteButton(anecdote.id)}>vote</button>
-                    </div>
-                </div>
-            ) : <p>test</p>} */}
-
-{/*             {anecdotes.map(anecdote =>
-                <div key={anecdote.id}>
-                    <div>
-                        {anecdote.content}
-                    </div>
-                    <div>
-                        has {anecdote.votes}
-                        <button onClick={() => handleVoteButton(anecdote.id)}>vote</button>
-                    </div>
-                </div>
-            )} */}
            {filteredAnecdotes.map(anecdote =>
                 <div key={anecdote.id}>
                     <div>

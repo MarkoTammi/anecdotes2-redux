@@ -3,8 +3,8 @@
 // Module to define store/state/actionCreator for filter 
 
 const filterReducer = (state = '', action) => {
-    console.log('filterReducer state : ', state)
-    console.log('filterReducer action :', action)
+    //console.log('filterReducer state : ', state)
+    //console.log('filterReducer action :', action)
 
     switch(action.type) {
         case 'SET_FILTERSTRING':
