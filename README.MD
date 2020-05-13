@@ -97,5 +97,18 @@ Sovellus hakee anecdootit käynnistyksessä db.json tiedostosta.
 6.14 anekdootit ja backend, step2  
 Uusi anekdootti lisätään db.json  
 
+6.15 anekdootit ja backend, step3  
+redux-thunk kirjaston asennus  
+mahdollistaa asynkronisten actionien luomisen  
+npm install --save redux-thunk  
+
+redux-storen anecdotes alustus redux-thunk kirjaton avulla   
+
+6.16 anekdootit ja backend, step4  
+uuden anekdootin luominen tapahtumaan redux-thunk-kirjaston avulla  
+tallennus db.json  
+
+
+
 
 
