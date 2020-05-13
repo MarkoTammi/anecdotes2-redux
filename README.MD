@@ -94,3 +94,8 @@ npm install axios --save
 
 Sovellus hakee anecdootit käynnistyksessä db.json tiedostosta.  
 
+6.14 anekdootit ja backend, step2  
+Uusi anekdootti lisätään db.json  
+
+
+

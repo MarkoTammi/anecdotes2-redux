@@ -25,8 +25,8 @@ const asObject = (anecdote) => {
 const initialState = anecdotesAtStart.map(asObject) */
 
 
-// Generates random ID for anecdote
-const getId = () => (100000 * Math.random()).toFixed(0)
+// Generates random ID for anecdote. Was used bofore new anecdote saved to db.json
+//const getId = () => (100000 * Math.random()).toFixed(0)
 
 const anecdoteReducer = (state = [], action) => {
   //console.log('anecdoteReducer state: ', state)
@@ -61,12 +61,14 @@ export const addVote = (id) => {
   }
 }
 
-export const createAnecdote = (content) => {
+export const createAnecdote = (data) => {
+  //console.log('anecdoteReducer - createAnecdote',data)
   return {
     type: 'CREATE',
     data: {
-      content,
-      id: getId(),
+      content: data.content,
+      //id: getId(), // was used before anecdote was saved to db.json
+      id: data.id ,
       votes: 0
     }
   }
