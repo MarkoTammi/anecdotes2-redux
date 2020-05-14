@@ -6,7 +6,7 @@ import React from 'react'
 
 import { useDispatch } from 'react-redux'
 import { createAnecdote } from '../reducers/anecdoteReducer'
-import { setNotification , clearNotification} from '../reducers/notificationReducer'
+import { setNotification , clearNotification, setClearNotification} from '../reducers/notificationReducer'
 
 
 const AnecdoteForm = () => {
@@ -19,14 +19,20 @@ const AnecdoteForm = () => {
     const content = event.target.anecdote.value
     event.target.anecdote.value = ''
 
+    // Save new anecdote to db.json and state
     dispatch(createAnecdote(content))
 
     // Display name of created anecdote in notification field
-    dispatch(setNotification('You create "' + content + '" blog'))
+    const msgToDisplay = 'You create "' + content + '" blog'
+    // content to display, time in sec to display
+    dispatch(setClearNotification(msgToDisplay, 2))  
+
+    // Was used before 6.18. Moved to notificationReducer
+/*     dispatch(setNotification('You create "' + content + '" blog'))
     // And clear notification field after 5 sec.
     setTimeout(() => {
       dispatch(clearNotification('CLEAR'))
-      }, 5000)
+      }, 5000) */
   }
 
   return (

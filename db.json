@@ -2,7 +2,7 @@
   "anecdotes": [
     {
       "content": "Adding manpower to a late software project makes it later!",
-      "votes": 16,
+      "votes": 21,
       "id": "47145"
     },
     {
@@ -29,16 +29,6 @@
       "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
       "id": "98312",
       "votes": 0
-    },
-    {
-      "content": "kelle",
-      "votes": 0,
-      "id": "ko1xN0A"
-    },
-    {
-      "content": "heku",
-      "votes": 3,
-      "id": "YmkCFYV"
     }
   ]
 }

@@ -6,7 +6,7 @@ import React from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { addVote } from '../reducers/anecdoteReducer'
-import { setNotification, clearNotification } from '../reducers/notificationReducer'
+import { setNotification, clearNotification, setClearNotification } from '../reducers/notificationReducer'
 
 const AnecdoteList = () => {
   
@@ -33,11 +33,17 @@ const AnecdoteList = () => {
 
         // Display notification for voted anecdote
         const votedAnecdote = anecdotes.filter(n => n.id === anecdote.id)
-        dispatch(setNotification('You voted : ' + votedAnecdote[0].content + ' It has ' + (votedAnecdote[0].votes) + ' votes.'))
+        
+        const msgToDisplay = 'You voted : ' + votedAnecdote[0].content + ' It has ' + (votedAnecdote[0].votes) + ' votes.'
+        // content to display, time in sec to display
+        dispatch(setClearNotification(msgToDisplay, 2))   
+        
+        // Was used before 6.18. Moved to notificationReducer
+        /* dispatch(setNotification('You voted : ' + votedAnecdote[0].content + ' It has ' + (votedAnecdote[0].votes) + ' votes.'))
         // Clear notification
         setTimeout(() => {
             dispatch(clearNotification('CLEAR'))
-            }, 5000)
+            }, 5000) */
     }
 
     return (

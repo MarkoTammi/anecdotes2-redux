@@ -112,7 +112,7 @@ tallennus db.json
 Äänestämisen tallennus db.json  
 
 6.18 anekdootit ja backend, step6  
-seuraavaksi
+Paranneltu asynkroninen action creator notifikaatioille  
 
 
 
