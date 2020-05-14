@@ -111,7 +111,7 @@ tallennus db.json
 6.17 anekdootit ja backend, step5  
 Äänestämisen tallennus db.json  
 
-6.18 anekdootit ja backend, step6  
+6.18 anekdootit ja backend, step6  - git branch part6-18  
 Paranneltu asynkroninen action creator notifikaatioille  
 
 
