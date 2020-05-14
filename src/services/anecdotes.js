@@ -1,6 +1,8 @@
 
 
 // Module /services/anecdotes.js to access db.json file
+// Require json serveer to up and run 
+// cmd "npm run server"
 
 import axios from 'axios'
 
@@ -17,4 +19,10 @@ const createNew = async (content) => {
   return response.data
 }
 
-export default { getAll, createNew }
+const updateVote = async (anecdote) => {
+  const response = axios.put(`${baseUrl}/${anecdote.id}`, {content: anecdote.content, votes: anecdote.votes})
+  //console.log('updateVote response.data',response )
+  return response
+}
+
+export default { getAll, createNew, updateVote }

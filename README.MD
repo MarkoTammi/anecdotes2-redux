@@ -108,7 +108,11 @@ redux-storen anecdotes alustus redux-thunk kirjaton avulla
 uuden anekdootin luominen tapahtumaan redux-thunk-kirjaston avulla  
 tallennus db.json  
 
+6.17 anekdootit ja backend, step5  
+Äänestämisen tallennus db.json  
 
+6.18 anekdootit ja backend, step6  
+seuraavaksi
 
 
 

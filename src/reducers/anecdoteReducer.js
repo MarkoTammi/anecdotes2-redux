@@ -11,10 +11,10 @@ const anecdoteReducer = (state = [], action) => {
   switch(action.type) {
     // Add votes for anecdote
     case 'ADD' :
-      const id = action.id.id
-      const anecdoteToGiveVote = state.find(anecdote => anecdote.id === id)
+      const id = action.id
+      const anecdoteToGiveVote = state.find(anecdote => anecdote.id.id === id)
       const changedAnecdote = {
-        ...anecdoteToGiveVote, votes: anecdoteToGiveVote.votes + 1
+        ...anecdoteToGiveVote, votes: anecdoteToGiveVote.votes
       }
       return state.map(anecdote => anecdote.id !== id ? anecdote : changedAnecdote)
 
@@ -33,15 +33,31 @@ const anecdoteReducer = (state = [], action) => {
 
 // ACTION CREATORS
 
-
-export const addVote = (id) => {
+// Was used before redux-thunk
+/* export const addVote = (id) => {
   return {
     type: 'ADD',
     id: {id}
   }
+}  */
+
+// Update votes -parameter
+export const addVote = (content) => {
+  return async dispatch => {
+    await anecdoteService.updateVote(content)
+    dispatch(
+      {
+        type: 'ADD',
+        data: {
+          votes: content.votes,
+          id: content.id
+        }
+      }
+    )
+  }
 }
 
-
+// Create new anecdote
 export const createAnecdote = content => {
   return async dispatch => {
     const newAnecdote = await anecdoteService.createNew(content)
@@ -58,6 +74,7 @@ export const createAnecdote = content => {
   }
 }
 
+// Initialize all necdotes at setup
 export const initializeAnecdotes = () => {
   return async dispatch => {
     const anecdotes = await anecdoteService.getAll()

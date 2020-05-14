@@ -24,13 +24,16 @@ const AnecdoteList = () => {
 
 
     // Event handler for vote button
-    const handleVoteButton = (id) => {
+    const handleVoteButton = (anecdote) => {
         // Set +1 for a voted anecdote
-        dispatch(addVote(id))
+        anecdote.votes = anecdote.votes + 1
+
+        // Update json file and state
+        dispatch(addVote(anecdote))
 
         // Display notification for voted anecdote
-        const votedAnecdote = anecdotes.filter(anecdote => anecdote.id === id)
-        dispatch(setNotification('You voted : ' + votedAnecdote[0].content))
+        const votedAnecdote = anecdotes.filter(n => n.id === anecdote.id)
+        dispatch(setNotification('You voted : ' + votedAnecdote[0].content + ' It has ' + (votedAnecdote[0].votes) + ' votes.'))
         // Clear notification
         setTimeout(() => {
             dispatch(clearNotification('CLEAR'))
@@ -46,7 +49,7 @@ const AnecdoteList = () => {
                     </div>
                     <div>
                         has {anecdote.votes}
-                        <button onClick={() => handleVoteButton(anecdote.id)}>vote</button>
+                        <button onClick={() => handleVoteButton(anecdote)}>vote</button>
                     </div>
                 </div>
             )}
