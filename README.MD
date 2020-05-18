@@ -4,7 +4,7 @@
 
 Anekdoottien aanestyssovellus Reduxilla toteutettu
 
-Front - react, redux  
+Front - react, redux, redux-thunk  
 Backend - tehtävästä 6.13 alkaen json-server  
  
 

@@ -22,9 +22,10 @@ const AnecdoteList = () => {
     // To include only anecdotes which match with filterString. filterString is empty all names are displayed.
     const filteredAnecdotes = anecdotes.filter(anecdote => anecdote.content.toLowerCase().includes(filterString.toLowerCase()))
 
-
     // Event handler for vote button
     const handleVoteButton = (anecdote) => {
+
+
         // Set +1 for a voted anecdote
         anecdote.votes = anecdote.votes + 1
 
@@ -34,7 +35,7 @@ const AnecdoteList = () => {
         // Display notification for voted anecdote
         const votedAnecdote = anecdotes.filter(n => n.id === anecdote.id)
         
-        const msgToDisplay = 'You voted : ' + votedAnecdote[0].content + ' It has ' + (votedAnecdote[0].votes) + ' votes.'
+        const msgToDisplay = 'You voted : ' + votedAnecdote[0].content + '. It has ' + (votedAnecdote[0].votes) + ' votes.'
         // content to display, time in sec to display
         dispatch(setClearNotification(msgToDisplay, 2))   
         
