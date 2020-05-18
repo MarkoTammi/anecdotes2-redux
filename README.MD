@@ -114,5 +114,9 @@ tallennus db.json
 6.18 anekdootit ja backend, step6  - git branch part6-18  
 Paranneltu asynkroninen action creator notifikaatioille  
 
+6.21 anekdootit, loppuhuipennus  - git branch part6-21  
+Bugi korjattu hyödyntäen global variable  
+
+
 
 

@@ -6,7 +6,8 @@ import React from 'react'
 
 import { useSelector, useDispatch } from 'react-redux'
 import { addVote } from '../reducers/anecdoteReducer'
-import { setNotification, clearNotification, setClearNotification } from '../reducers/notificationReducer'
+import { setClearNotification } from '../reducers/notificationReducer'
+import { timeoutId } from '../global'
 
 const AnecdoteList = () => {
   
@@ -37,7 +38,7 @@ const AnecdoteList = () => {
         
         const msgToDisplay = 'You voted : ' + votedAnecdote[0].content + '. It has ' + (votedAnecdote[0].votes) + ' votes.'
         // content to display, time in sec to display
-        dispatch(setClearNotification(msgToDisplay, 2))   
+        dispatch(setClearNotification(msgToDisplay, 5, timeoutId))   
         
         // Was used before 6.18. Moved to notificationReducer
         /* dispatch(setNotification('You voted : ' + votedAnecdote[0].content + ' It has ' + (votedAnecdote[0].votes) + ' votes.'))
